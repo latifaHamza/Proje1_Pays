@@ -1,0 +1,350 @@
+html{
+    direction: rtl;
+    background-color:white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.opasite{
+    transition: opacity .5s;
+}
+.opasite:hover{
+    opacity: 0.5;
+}
+.clear{
+    clear: both;
+}
+.content{
+    width: 80%;
+    margin: auto;
+}
+.header{
+    height: 80px;
+    position: fixed;
+    width:100%; 
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+   
+}
+.header .logo{
+    width: 40%;
+    float: right;
+}
+.header .logo img{
+    width: 10%;
+    margin-top: 15px;
+}
+.header .nav{
+    list-style: none;
+    width: 60%;
+    float: right;
+    text-align: right;
+}
+.nav > li{
+      display: inline-block;
+      padding: 15px;
+      margin-top: 15px;
+}
+.nav li a{
+    text-decoration: none;
+    font-family: 'Lalezar', cursive;
+    padding: 20px 15px;
+    text-align: center;
+    color: white;
+}
+.nav>li a:after{
+    content: "";
+    display: block;
+    width:0;
+    height: 3px;
+    background-color: #6195ff;
+    transition: width 0.5s;
+}
+.nav>li a.active:after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 3px;
+    background-color: #6195ff;
+    transition: width 0.5s;
+}
+.nav>li a:hover::after{
+    width: 100%;
+}
+.afric{
+    position: relative;
+}
+.mune{
+    position: absolute;
+    visibility: hidden;
+}
+.afric a:hover + ul{
+    visibility: visible;
+}
+.home{
+     height: 100vh;
+    background-image:url(../image/World1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   position: relative;
+}
+.noir{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+}
+.home-content{
+    height: 200px;
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.titre{
+    font-family: 'Changa', sans-serif;
+    color: white;
+    font-size: 3rem;
+}
+.home-desc{
+    margin:20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.secltion-headr{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.selction-title{
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.line{
+    display: block;
+    height: 5px;
+    width: 60px;
+    margin: 0 auto 70px auto;
+    background-color: #6195ff;
+}
+.pd-y{
+    padding: 120px 0;
+}
+.about-content
+{
+    display:  inline-block;
+    width: 390px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(224, 224, 224, 0.533);
+    margin: 10px;
+}
+.logo-ab{
+    width: 30px;
+    text-align: center;
+}
+.p-ab{
+    color: rgba(37, 37, 37, 0.6);
+}
+.asia
+{
+  margin-right: 200px;
+}
+.link-dit{
+    color: #6195ff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 2px;
+}
+.ltr-effect{
+    position: relative;
+}
+.ltr-effect::after{
+    position: absolute;
+    content: "";
+    background-color: #333;
+    width: 0;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width 0.5s;
+}
+.ltr-effect:hover::after{
+    width: 100%;
+}
+.title-ab{
+    transform: color 1s;
+}
+.ltr-effect:hover .title-ab{
+    color: #ffff;     
+}
+.ltr-effect:hover .p-ab{
+    color: rgb(196, 186, 186);
+}
+.protfolio{
+    background-color: #f9f9f9;
+}  
+.protfolio-content {
+    overflow: hidden;
+} 
+ .img {
+    width: 100%;
+    display:inline-block;
+     height: 160px;
+} 
+.paye .img {
+    width: 100%;
+    display:inline-block;
+    height: 190px;
+} 
+.protfolio-item {
+    width: 30%;
+    float: right;
+    margin: 15px;
+    position: relative;
+    padding: 20px;
+} 
+.paye{
+    width: 45%;
+    height: 30%;
+    float: right;
+    margin: 15px;
+    position: relative;
+    padding: 20px;
+}
+ .layer-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+.protfolio-item:hover .layer-content{
+    opacity: 1;
+    visibility: visible;
+}
+.paye:hover .layer-content{
+    opacity: 1;
+    visibility: visible;
+}
+.layer-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}  
+.layer-content-title{
+  color: #fff;
+  position: relative;
+  top:10px;
+  transition: top 0.5s;
+  transition-delay:0.5s ;
+  opacity: 0;
+}
+.protfolio-item .layer-content .categer{
+  color: #6195ff;
+  position: relative;
+  top: 10px;
+  transition: top 0.5s;
+  transition-delay:0.5s ;
+  opacity: 0;
+}
+.protfolio-item .layer-content  .icon{
+    background-color:#6195ff ;
+    line-height: 50px;
+    padding: 4px;
+    margin: 8px;
+    border-radius: 50%;
+}
+.paye .layer-content  .icon{
+    background-color: #333;
+    line-height: 50px;
+    padding: 4px;
+    margin: 8px;
+    border-radius: 50%;
+}
+.layer-content i{
+    position: relative;
+    top: 10px;
+    transition: top 0.5s;
+    transition-delay:0.8s ;
+    opacity: 0;
+}
+.protfolio-item:hover .layer-content-title,
+.protfolio-item:hover .layer-content .categer,
+.protfolio-item .layer-content i {
+   top: 0;
+   opacity: 1;
+   } 
+ .paye:hover .layer-content-title,
+.paye:hover .layer-content .categer,
+.paye .layer-content i {
+   top: 0;
+   opacity: 1;
+   } 
+   .texte{
+       padding: 10px;
+       margin-top: 80PX;
+       margin-right: 80px;
+       width: 40%;
+       display: inline-block;
+       font-size: 20PX;
+   }
+ .ry{
+     float: right;
+   }
+   .lf{
+       float:left;
+   }
+.lang{
+    color: rgb(9, 9, 87);
+    font-weight: bold;
+}
+.footer{
+    background-color: #333;
+    text-align: center;
+    padding: 40px;
+}
+.footer-link{
+    list-style: none;
+   margin: 20px 0;
+}
+.footer-link li{
+    display: inline-block;
+}
+.footer-link li a{
+    display: block;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.langh{
+    font-size: 70px;
+    color: white;
+}
+.copy{
+    color: #999;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+ 
